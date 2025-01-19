@@ -12,6 +12,7 @@
 
 richter = input("Richter scale: ")
 
+#note that isdigit doesn't work on floats
 
 richter = float(richter)
 if richter >= 8:
