@@ -18,23 +18,21 @@
 temperature = input("Enter the temperature: ")
 unit = input("Enter the unit of temperature (C/F): ")
 
-if temperature.isdigit():
-    temperature = int(temperature)
-    if unit == "F" or unit == "f":
-        if temperature >= 212:
-            print("At that temperature, the water is gaseous.")
-        elif temperature < 32:
-            print("At that temperature, the water is solid.")
-        else:
-            print("At that temperature, the water is liquid")
-    elif unit == "C" or unit == "c":
-        if temperature >= 100:
-            print("At that temperature, the water is gaseous.")
-        elif temperature < 0:
-            print("At that temperature, the water is solid.")
-        else:
-            print("At that temperature, the water is liquid")
+
+temperature = int(temperature)
+if unit == "F" or unit == "f":
+    if temperature >= 212:
+        print("At that temperature, the water is gaseous.")
+    elif temperature < 32:
+        print("At that temperature, the water is solid.")
     else:
-        print("Please enter a valid unit of temperature.")
+        print("At that temperature, the water is liquid")
+elif unit == "C" or unit == "c":
+    if temperature >= 100:
+        print("At that temperature, the water is gaseous.")
+    elif temperature < 0:
+        print("At that temperature, the water is solid.")
+    else:
+        print("At that temperature, the water is liquid")
 else:
-    print("Please enter an integer.")
+    print("Please enter a valid unit of temperature.")
