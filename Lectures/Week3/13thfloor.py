@@ -11,7 +11,10 @@ if floor > 13:
 else:
     actualFloor = floor
 
-#these are the same outputs
+#these are the same outputs:
+
+#compound statement
 print("Actual Floor %d" % actualFloor)
 
+#conditional expression
 print("Actual floor", floor-1 if floor > 13 else floor)
