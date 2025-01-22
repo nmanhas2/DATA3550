@@ -16,18 +16,17 @@
 #else error
 
 temperature = input("Enter the temperature: ")
-unit = input("Enter the unit of temperature (C/F): ")
-
+unit = input("Enter the unit of temperature (C/F): ").lower()
 
 temperature = int(temperature)
-if unit == "F" or unit == "f":
+if unit == "f":
     if temperature >= 212:
         print("At that temperature, the water is gaseous.")
     elif temperature < 32:
         print("At that temperature, the water is solid.")
     else:
         print("At that temperature, the water is liquid")
-elif unit == "C" or unit == "c":
+elif unit == "c":
     if temperature >= 100:
         print("At that temperature, the water is gaseous.")
     elif temperature < 0:

@@ -2,14 +2,13 @@
 #integers, and whose ouput is the smallest
 #of the three values
 
-inputOne = int(input("Enter an integer (#1): "))
-inputTwo = int(input("Enter an integer (#2): "))
-inputThree = int(input("Enter an integer (#3): "))
+inputOne = input("Enter an integer (#1): ")
+inputTwo = input("Enter an integer (#2): ")
+inputThree = input("Enter an integer (#3): ")
 
-if inputOne < inputTwo and inputOne < inputThree:
-    print(inputOne)
-elif inputTwo < inputOne and inputTwo < inputThree:
-    print(inputTwo)
+if(inputOne.isdigit() and inputTwo.isdigit() and inputThree.isdigit()):
+    print(min(int(inputOne), int(inputTwo), int(inputThree)))
 else:
-    print(inputThree)
+    print("Please enter three integers.")
+
     
