@@ -20,13 +20,13 @@ if userNumber == 0:
     myOutput = "zero"
 else:
     if abs(userNumber) > THRESHOLD:
-        myOutput = "large"
+        size = "large"
     else:
-        myOutput = "small"
+        size = "small"
 
     if userNumber > 0:
-        myOutput = myOutput + " positive"
+        sign = "positive"
     else:
-        myOutput = myOutput + " negative"
+        sign = "negative"
 
-print(myOutput)
+print(f"{size} {sign}")

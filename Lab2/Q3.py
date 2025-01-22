@@ -12,19 +12,15 @@
 
 year = input("Enter the year: ")
 
-if year.isdigit():
-    year = int(year)
-    if year >= 0:
-        if year >= 2101:
-            print("Distant future")
-        elif year >= 2001:
-            print("21st century")
-        elif year >= 1901:
-            print("20th century")
-        else:
-            print("Long ago")
+if year.isdigit() and int(year) > 0:  
+    if year >= 2101:
+        print("Distant future")
+    elif year >= 2001:
+        print("21st century")
+    elif year >= 1901:
+        print("20th century")
     else:
-        print("Please enter a positive number.")
+        print("Long ago")
 else:
-    print("Please enter a positive whole number.")
+    print("Please enter a positive integer.")
     
