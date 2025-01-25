@@ -8,7 +8,7 @@
 #initial balance = 10,000
 #interest = 0.05
 #final balance = 2 * initial balance
-#year = 0 to start, incriment as we go
+#year = 0 to start, increment as we go
 
 INITIAL_BALANCE = 10000
 INTEREST_RATE = 0.05
