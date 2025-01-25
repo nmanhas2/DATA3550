@@ -1,16 +1,4 @@
-#Write a program that reads a floating-point 
-#number and prints "zero" if the number is
-#zero. Otherwise, print "positive" or "negative"
-#Add small if the absoulte value of the number 
-#is less than 1,000,000 or big if it exceeds
-#1,000,000
-
-#if number = 0, print 0
-#elif number is pos, print positive
-#else number is negative, print negative
-
-#if number < 1,000,000 print small
-#else print big
+#My test case: input = -9999.562, output was "small negative"
 
 THRESHOLD = 1000000
 
@@ -25,8 +13,10 @@ else:
         size = "small"
 
     if userNumber > 0:
-        sign = "positive"
+        sign = " positive"
     else:
-        sign = "negative"
+        sign = " negative"
 
-print(f"{size} {sign}")
+    myOutput = size + sign
+
+print(f"{myOutput}")
