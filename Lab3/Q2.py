@@ -9,7 +9,7 @@
 #   else:
 #       outputString += ch
 
-userInput = input("Enter a string: ")
+userInput = input("Enter a string: ").lower()
 outputString = ""
 
 for ch in userInput:
