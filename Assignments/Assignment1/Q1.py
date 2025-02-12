@@ -2,25 +2,17 @@
 #pounds, heart rate in BPM, number of
 #minutes exercising, and gender (M/W)
 
-def validInteger(num, error):
-
-    if num.isdigit():
-        num = int(num)
-        return num
-    else:
-        print(error)
-        exit()
-        return
-
-def validFloat(num, error):
-
-    if num.replace(".","").isdigit():
-        num = float(num)
-        return num
-    else:
-        print(error)
-        exit()
-        return
+def validNumber(prompt, dataType=int):
+    while 1:
+        try:
+            num = dataType(input(prompt))
+            if num >= 0:
+                return num
+            else:
+                print(f"Please input a positive number.")
+        except ValueError as e:
+            print(f"Invalid input. Error: {e}")
+        
 
 def womenCalories (age, weight, heartRate, time):
 
@@ -36,17 +28,13 @@ def menCalories (age, weight, heartRate, time):
     print(f"{calories:.2f} calories burned for a man.")
 
 def main():
-    age = input("Enter your age: ")
-    age = validInteger(age, "Please enter a positive integer for the age.")
+    age = validNumber("Enter your age: ")
 
-    weight = input("Enter your weight in pounds: ")
-    weight = validFloat(weight, "Enter a positive floating point number for the weight.")
+    weight = validNumber("Enter your weight in pounds: ", float)
 
-    heartRate = input("Enter your heartrate (BPM): ")
-    heartRate = validInteger(heartRate, "Please a positive integer for the heartrate.")
+    heartRate = validNumber("Enter your heartrate (BPM): ")
 
-    time = input("Enter how long you exercised for in minutes: ")
-    time = validInteger(time, "Please enter a positive floating point number for the time.")
+    time = validNumber("Enter how long you exercised for in minutes: ")
 
     womenCalories(age, weight, heartRate, time)
     menCalories(age, weight, heartRate, time)
