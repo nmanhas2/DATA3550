@@ -40,3 +40,10 @@ greeting = "Hello, World!"
 greeted = greeting[7 : 12]   # The substring "World"
 
 print(greeted[ : ])
+
+#there's also negative indexing
+#remember that -1 is the last element
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+print(numbers[-1])
+print(numbers[-2:])
+print(numbers[:-3])
