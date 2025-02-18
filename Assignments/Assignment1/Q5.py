@@ -14,11 +14,11 @@ def steps_to_miles(steps):
 def main():
     while 1:
         steps = input("Enter the number of steps: ")
-        
+
         if steps.isdigit():
             steps = int(steps)
             miles = steps_to_miles(steps)
-            print(f"{miles} miles walked after walking {steps} steps.")
+            print(f"{miles:.2f} miles walked after walking {steps} steps.")
             break
         else:
             print("Enter a positive integer number.")
