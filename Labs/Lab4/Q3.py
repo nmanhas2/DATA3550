@@ -16,8 +16,3 @@ while userInput != flag:
 
 for i in range(0, DIE_SIDES):
     print(f"{diceValues[i]}: {diceCounts[i]}")
-
-
-
-
-        
