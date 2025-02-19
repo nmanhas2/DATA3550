@@ -9,7 +9,7 @@ while 1:
         if userInput.replace('.','').replace('-','').isdigit():
             numbersList.append(float(userInput))
 
-        userInput = input("Enter a number to add to the list: ")
+        userInput = input("Enter a number to add to the list (or type 'done' to finish): ")
     else:
         break
 
