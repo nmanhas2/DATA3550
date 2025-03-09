@@ -3,6 +3,8 @@ values = [5, 20, 18, -3, 67, 85, 32]
 
 prices = values
 
+values[0] = 95
+
 print(max(values))
 print(max(prices))
 
