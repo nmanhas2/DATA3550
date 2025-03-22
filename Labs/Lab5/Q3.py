@@ -8,7 +8,8 @@ def getAcronym(phrase):
 def getInput(prompt):
     while 1:
         myInput = input(prompt)
-        if myInput.isalpha() and not myInput.isalnum():
+        noSpaces = myInput.replace(" ", "")
+        if noSpaces.isalpha() and noSpaces.isalnum():       
             return myInput
         else:
             print("Invalid phrase. ")
